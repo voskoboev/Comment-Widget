@@ -1,0 +1,30 @@
+.comment__list-item {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 400px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.comment__list-item-name {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.comment__list-item-text {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  word-break: break-all;
+}
+
+.comment__list-item-time {
+  display: inline-block;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 10px;
+}
+
+.comment__list-item-delete-btn {
+  display: inline-block;
+  padding: 1px;
+  margin-left: 210px;
+}
