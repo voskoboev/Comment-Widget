@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Comment = props => {
-  const comments = props.state.comments;
+  const comments = props.comments;
 
   // console.log({props});
   

@@ -15,16 +15,11 @@ class App extends Component {
 
     this.state = {
       comments: [],
-      name: null,
-      text: null,
-      date: null,
-      id: null
     };
 
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleTextChange = this.handleTextChange.bind(this);
-    this.setTimeAndDate = this.setTimeAndDate.bind(this);
-    this.setId = this.setId.bind(this);
+    // this.setTimeAndDate = this.setTimeAndDate.bind(this);
+    
+    this.handleChange = this.handleChange.bind(this);
     this.handleBtnClickAndCheckInputs = this.handleBtnClickAndCheckInputs.bind(this);
   }
 
@@ -40,80 +35,55 @@ class App extends Component {
     this.setState(this.state);
   }
 
-  handleNameChange(ev) {
-    const inputValue = document.querySelector('.comment__name-input').value;
-
-    this.setState({
-      name: inputValue
-
-      // name: ev.target.value
-    });
-  }
-
-  handleTextChange(ev) { 
-    const textAreaValue = document.querySelector('.comment__textarea').value;
-
-    this.setState({
-      text: textAreaValue
-
-      // text: ev.target.value
-    });
-  }
-
-  setTimeAndDate() {
+  handleChange() {
+    const stateComments = this.state.comments;
+    const name = document.querySelector('.comment__name-input').value;
+    const text = document.querySelector('.comment__textarea').value;
     const date = new Date();
-    const years = date.getFullYear();
-    const months = date.getMonth() + 1;
-    const days = date.getDate();
-    const hours = date.getHours();
-    const completeHours = (hours.toString().length === 1 ? '0' + hours.toString() : hours);
-    const minutes = date.getMinutes();
-    const completeMinutes = (minutes.toString().length === 1 ? '0' + minutes.toString() : minutes);
-    const timeAndDate = `${completeHours}:${completeMinutes} ${days}.${months}.${years}`;
-
-    this.setState({
-      date: timeAndDate
-    });
-
-    console.log(this.state.date);
-  }
-
-  setId() {
-    this.setState({
-      id: this.state.comments.length.toString()
-    });
+    const id = this.state.comments.length.toString();
     
-    console.log(this.state.id);
-  }
-  
-  addCommentToStateBuffer() {
-    const commentObj = {
-      name: this.state.name,
-      text: this.state.text,
-      date: this.state.date,
-      id: this.state.id
+    const newCommentItem = {
+      name,
+      text,
+      date,
+      id
     }
     
-    this.state.comments.push(commentObj);
-    
+    stateComments.push(newCommentItem);
+
+    localStorage.setItem('newCommentItem', JSON.stringify(this.state.comments));
+
+    console.log('new comment', newCommentItem);
     console.log(this.state.comments);
   }
-  
-  saveCommentToLocalStorage() {
-    localStorage.setItem('comments', JSON.stringify(this.state.comments)); 
-  }
 
-  clearInputs() {  
+  // setTimeAndDate() {
+  //   const date = new Date();
+  //   const years = date.getFullYear();
+  //   const months = date.getMonth() + 1;
+  //   const days = date.getDate();
+  //   const hours = date.getHours();
+  //   const completeHours = (hours.toString().length === 1 ? '0' + hours.toString() : hours);
+  //   const minutes = date.getMinutes();
+  //   const completeMinutes = (minutes.toString().length === 1 ? '0' + minutes.toString() : minutes);
+  //   const timeAndDate = `${completeHours}:${completeMinutes} ${days}.${months}.${years}`;
+
+  //   this.setState({
+  //     date: timeAndDate
+  //   });
+
+  //   console.log(this.state.date);
+  // }
+
+  clearInputs() {
     document.querySelector('.comment__name-input').value = '';
-    document.querySelector('.comment__textarea').value = '';  
+    document.querySelector('.comment__textarea').value = '';
   }
 
   deleteComment(ev) {
     const commentDelBtn = ev.target;
 
     commentDelBtn.parentElement.remove();
-
-
   }
 
   handleBtnClickAndCheckInputs() {
@@ -121,49 +91,43 @@ class App extends Component {
       document.querySelector('.comment__name-input').value.trim() === '' ||
       document.querySelector('.comment__textarea').value.trim() === ''
     ) {
-      this.clearInputs();
-      
       return alert('Enter values!');
     }
 
-    this.handleNameChange();
-    this.handleTextChange();
-
-    this.setTimeAndDate();
-    this.setId();
-    this.addCommentToStateBuffer();
-    this.saveCommentToLocalStorage();
+    // this.setTimeAndDate();
+    
+    this.handleChange();
     this.clearInputs();
   }
 
-  render() {    
+  render() {
     return (
       <div>
         <ul
           className="comment__list"
         >
-          <Comment 
-            state={this.state} 
+          <Comment
+            comments={this.state.comments}
             deleteComment={this.deleteComment}
           />
         </ul>
         <h1 className="comment_heading"
-          >
-            Comments App
+        >
+          Comments App
         </h1>
-        <input 
-          className="comment__name-input" type="text" 
+        <input
+          className="comment__name-input" type="text"
           placeholder="Name"
         />
-        <textarea 
+        <textarea
           className="comment__textarea"
           placeholder="Text"
-          >
+        >
         </textarea>
-        <button 
+        <button
           className="comment__btn"
           onClick={this.handleBtnClickAndCheckInputs}
-          >
+        >
           Add comment
         </button>
       </div>
@@ -171,7 +135,7 @@ class App extends Component {
   }
 }
 
-ReactDOM.render( 
+ReactDOM.render(
   <App />,
   document.querySelector('.comment-wrapper')
 );
