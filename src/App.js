@@ -17,73 +17,67 @@ class App extends Component {
       comments: [],
     };
 
-    // this.setTimeAndDate = this.setTimeAndDate.bind(this);
-    
+    // this.deleteRenderedComment = this.deleteRenderedComment.bind(this);
+    this.deleteComment = this.deleteComment.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleBtnClickAndCheckInputs = this.handleBtnClickAndCheckInputs.bind(this);
   }
 
   componentDidMount() {
-    const storageComments = JSON.parse(localStorage.getItem('comments'));
+    const storageComments = JSON.parse(localStorage.getItem('storageComments'));
     const stateComments = this.state.comments;
 
     if (storageComments === null) return;
 
     storageComments.forEach(comment => stateComments.push(comment));
 
-    // this.forceUpdate();
-    this.setState(this.state);
+    this.forceUpdate();
   }
 
   handleChange() {
-    const stateComments = this.state.comments;
     const name = document.querySelector('.comment__name-input').value;
     const text = document.querySelector('.comment__textarea').value;
     const date = new Date();
-    const id = this.state.comments.length.toString();
-    
+    // const id = this.state.comments.length.toString();
+
     const newCommentItem = {
       name,
       text,
       date,
-      id
+      // id
     }
-    
-    stateComments.push(newCommentItem);
 
-    localStorage.setItem('newCommentItem', JSON.stringify(this.state.comments));
+    this.setState({ ...this.state, comments: [...this.state.comments, newCommentItem] });
 
-    console.log('new comment', newCommentItem);
-    console.log(this.state.comments);
+    localStorage.setItem('storageComments', JSON.stringify([...this.state.comments, newCommentItem]));
+
+    // console.log('new comment', newCommentItem);
+    // console.log(this.state.comments);
   }
 
-  // setTimeAndDate() {
-  //   const date = new Date();
-  //   const years = date.getFullYear();
-  //   const months = date.getMonth() + 1;
-  //   const days = date.getDate();
-  //   const hours = date.getHours();
-  //   const completeHours = (hours.toString().length === 1 ? '0' + hours.toString() : hours);
-  //   const minutes = date.getMinutes();
-  //   const completeMinutes = (minutes.toString().length === 1 ? '0' + minutes.toString() : minutes);
-  //   const timeAndDate = `${completeHours}:${completeMinutes} ${days}.${months}.${years}`;
-
-  //   this.setState({
-  //     date: timeAndDate
-  //   });
-
-  //   console.log(this.state.date);
-  // }
 
   clearInputs() {
     document.querySelector('.comment__name-input').value = '';
     document.querySelector('.comment__textarea').value = '';
   }
 
-  deleteComment(ev) {
-    const commentDelBtn = ev.target;
+  // deleteRenderedComment(ev) {
+  //   const commentDelBtn = ev.target;
 
-    commentDelBtn.parentElement.remove();
+  //   commentDelBtn.parentElement.remove();
+  // }
+
+  deleteComment(ev) {
+    // const storage = JSON.parse(localStorage.getItem('storageComments'));
+
+    // storage.splice(ev, 1)
+
+    // console.log('stor', storage);
+    // console.log(this.state.comments)
+
+    this.setState({ comments: [...this.state.comments].splice(ev, 1) });
+
+    this.forceUpdate();
   }
 
   handleBtnClickAndCheckInputs() {
@@ -94,8 +88,6 @@ class App extends Component {
       return alert('Enter values!');
     }
 
-    // this.setTimeAndDate();
-    
     this.handleChange();
     this.clearInputs();
   }
@@ -109,6 +101,7 @@ class App extends Component {
           <Comment
             comments={this.state.comments}
             deleteComment={this.deleteComment}
+            // deleteRenderedComment={this.deleteRenderedComment}
           />
         </ul>
         <h1 className="comment_heading"

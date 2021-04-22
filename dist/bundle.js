@@ -30580,6 +30580,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Comment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Comment */ "./src/Comment.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -30622,16 +30640,10 @@ var App = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this);
     _this.state = {
-      comments: [],
-      name: null,
-      text: null,
-      date: null,
-      id: null
-    };
-    _this.handleNameChange = _this.handleNameChange.bind(_assertThisInitialized(_this));
-    _this.handleTextChange = _this.handleTextChange.bind(_assertThisInitialized(_this));
-    _this.setTimeAndDate = _this.setTimeAndDate.bind(_assertThisInitialized(_this));
-    _this.setId = _this.setId.bind(_assertThisInitialized(_this));
+      comments: []
+    }; // this.setTimeAndDate = this.setTimeAndDate.bind(this);
+
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleBtnClickAndCheckInputs = _this.handleBtnClickAndCheckInputs.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -30649,65 +30661,41 @@ var App = /*#__PURE__*/function (_Component) {
       this.setState(this.state);
     }
   }, {
-    key: "handleNameChange",
-    value: function handleNameChange(ev) {
-      var inputValue = document.querySelector('.comment__name-input').value;
-      this.setState({
-        name: inputValue // name: ev.target.value
-
-      });
-    }
-  }, {
-    key: "handleTextChange",
-    value: function handleTextChange(ev) {
-      var textAreaValue = document.querySelector('.comment__textarea').value;
-      this.setState({
-        text: textAreaValue // text: ev.target.value
-
-      });
-    }
-  }, {
-    key: "setTimeAndDate",
-    value: function setTimeAndDate() {
+    key: "handleChange",
+    value: function handleChange() {
+      var stateComments = this.state.comments;
+      var name = document.querySelector('.comment__name-input').value;
+      var text = document.querySelector('.comment__textarea').value;
       var date = new Date();
-      var years = date.getFullYear();
-      var months = date.getMonth() + 1;
-      var days = date.getDate();
-      var hours = date.getHours();
-      var completeHours = hours.toString().length === 1 ? '0' + hours.toString() : hours;
-      var minutes = date.getMinutes();
-      var completeMinutes = minutes.toString().length === 1 ? '0' + minutes.toString() : minutes;
-      var timeAndDate = "".concat(completeHours, ":").concat(completeMinutes, " ").concat(days, ".").concat(months, ".").concat(years);
-      this.setState({
-        date: timeAndDate
-      });
-      console.log(this.state.date);
-    }
-  }, {
-    key: "setId",
-    value: function setId() {
-      this.setState({
-        id: this.state.comments.length.toString()
-      });
-      console.log(this.state.id);
-    }
-  }, {
-    key: "addCommentToStateBuffer",
-    value: function addCommentToStateBuffer() {
-      var commentObj = {
-        name: this.state.name,
-        text: this.state.text,
-        date: this.state.date,
-        id: this.state.id
+      var id = this.state.comments.length.toString();
+      var newCommentItem = {
+        name: name,
+        text: text,
+        date: date,
+        id: id
       };
-      this.state.comments.push(commentObj);
+      this.setState(_objectSpread(_objectSpread({}, this.state), {}, {
+        comments: [].concat(_toConsumableArray(this.state.comments), [newCommentItem])
+      }));
+      localStorage.setItem('newCommentItem', JSON.stringify(this.state.comments));
+      console.log('new comment', newCommentItem);
       console.log(this.state.comments);
-    }
-  }, {
-    key: "saveCommentToLocalStorage",
-    value: function saveCommentToLocalStorage() {
-      localStorage.setItem('comments', JSON.stringify(this.state.comments));
-    }
+    } // setTimeAndDate() {
+    //   const date = new Date();
+    //   const years = date.getFullYear();
+    //   const months = date.getMonth() + 1;
+    //   const days = date.getDate();
+    //   const hours = date.getHours();
+    //   const completeHours = (hours.toString().length === 1 ? '0' + hours.toString() : hours);
+    //   const minutes = date.getMinutes();
+    //   const completeMinutes = (minutes.toString().length === 1 ? '0' + minutes.toString() : minutes);
+    //   const timeAndDate = `${completeHours}:${completeMinutes} ${days}.${months}.${years}`;
+    //   this.setState({
+    //     date: timeAndDate
+    //   });
+    //   console.log(this.state.date);
+    // }
+
   }, {
     key: "clearInputs",
     value: function clearInputs() {
@@ -30724,16 +30712,11 @@ var App = /*#__PURE__*/function (_Component) {
     key: "handleBtnClickAndCheckInputs",
     value: function handleBtnClickAndCheckInputs() {
       if (document.querySelector('.comment__name-input').value.trim() === '' || document.querySelector('.comment__textarea').value.trim() === '') {
-        this.clearInputs();
         return alert('Enter values!');
-      }
+      } // this.setTimeAndDate();
 
-      this.handleNameChange();
-      this.handleTextChange();
-      this.setTimeAndDate();
-      this.setId();
-      this.addCommentToStateBuffer();
-      this.saveCommentToLocalStorage();
+
+      this.handleChange();
       this.clearInputs();
     }
   }, {
@@ -30742,7 +30725,7 @@ var App = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "comment__list"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Comment__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        state: this.state,
+        comments: this.state.comments,
         deleteComment: this.deleteComment
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "comment_heading"
@@ -30782,7 +30765,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Comment = function Comment(props) {
-  var comments = props.state.comments; // console.log({props});
+  var comments = props.comments; // console.log({props});
 
   var result = comments.map(function (comment) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -30794,7 +30777,7 @@ var Comment = function Comment(props) {
       className: "comment__list-item-text"
     }, comment.text), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("time", {
       className: "comment__list-item-time"
-    }, comment.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, new Date(comment.date).toLocaleDateString(), ", ", new Date(comment.date).toLocaleTimeString()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "comment__list-item-delete-btn",
       onClick: props.deleteComment
     }, "Delete"));

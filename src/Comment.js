@@ -4,36 +4,40 @@ const Comment = props => {
   const comments = props.comments;
 
   // console.log({props});
-  
-  const result = comments.map(comment => {
+
+  const result = comments.map((comment, index) => {
     return (
-      <li 
+      <li
         className="comment__list-item"
-        key={comment.id}
+        key={index}
       >
-        <div 
+        <div
           className="comment__list-item-name">
           {comment.name}
         </div>
-        <p 
+        <p
           className="comment__list-item-text">
           {comment.text}
         </p>
-        <time 
+        <time
           className="comment__list-item-time"
         >
-          {comment.date}
-        </time> 
+          {new Date(comment.date).toLocaleDateString()}, {new Date(comment.date).toLocaleTimeString()}
+        </time>
         <button
-        className="comment__list-item-delete-btn"
-        onClick={props.deleteComment}
+          className="comment__list-item-delete-btn"
+          onClick={() => {
+            props.deleteComment(index);
+            // props.deleteRenderedComment();
+
+          }}
         >
           Delete
         </button>
       </li>
     )
   })
-  
+
   return result;
 }
 
