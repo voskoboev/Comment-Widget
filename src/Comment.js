@@ -3,13 +3,11 @@ import React from 'react';
 const Comment = props => {
   const comments = props.comments;
 
-  // console.log({props});
-
-  const result = comments.map((comment, index) => {
+  const result = comments.map(comment => {
     return (
       <li
         className="comment__list-item"
-        key={index}
+        key={comment.id}
       >
         <div
           className="comment__list-item-name">
@@ -26,11 +24,7 @@ const Comment = props => {
         </time>
         <button
           className="comment__list-item-delete-btn"
-          onClick={() => {
-            props.deleteComment(index);
-            // props.deleteRenderedComment();
-
-          }}
+          onClick={() => props.deleteComment(comment.id)}
         >
           Delete
         </button>
