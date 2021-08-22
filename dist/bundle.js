@@ -101,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".comment__list {\n  position: absolute;\n  top: 50px;\n  left: 50px;\n  width: 400px;\n  list-style-type: none;\n}\n\n.comment_heading {\n  width: 240px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.comment__name-input {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 20px;\n}\n\n.comment__textarea {\n  width: 300px;\n  height: 150px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 20px;\n}\n\n.comment__btn {\n  width: 200px;\n  height: 50px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}", "",{"version":3,"sources":["webpack://src/app.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,SAAA;EACA,UAAA;EACA,YAAA;EACA,qBAAA;AACF;;AAEA;EACE,YAAA;EACA,cAAA;EACA,iBAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;AACF;;AAEA;EACE,cAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;AACF;;AAEA;EACE,YAAA;EACA,aAAA;EACA,cAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;AACF;;AAEA;EACE,YAAA;EACA,YAAA;EACA,cAAA;EACA,iBAAA;EACA,kBAAA;AACF","sourcesContent":[".comment__list {\r\n  position: absolute;\r\n  top: 50px;\r\n  left: 50px;\r\n  width: 400px;\r\n  list-style-type: none;\r\n}\r\n\r\n.comment_heading {\r\n  width: 240px;\r\n  display: block;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-top: 16px;\r\n  margin-bottom: 16px;\r\n}\r\n\r\n.comment__name-input {\r\n  display: block;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.comment__textarea {\r\n  width: 300px; \r\n  height: 150px;\r\n  display: block; \r\n  margin-left: auto; \r\n  margin-right: auto; \r\n  margin-bottom: 20px;\r\n}\r\n\r\n.comment__btn {\r\n  width: 200px; \r\n  height: 50px; \r\n  display: block; \r\n  margin-left: auto; \r\n  margin-right: auto;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".comment__list {\n  position: absolute;\n  top: 50px;\n  left: 50px;\n  width: 400px;\n  list-style-type: none;\n}\n\n.comment_heading {\n  width: 240px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.comment__name-input {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 20px;\n}\n\n.comment__textarea {\n  width: 300px;\n  height: 150px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 20px;\n}\n\n.comment__btn {\n  width: 200px;\n  height: 50px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}", "",{"version":3,"sources":["webpack://src/app.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,SAAA;EACA,UAAA;EACA,YAAA;EACA,qBAAA;AACF;;AAEA;EACE,YAAA;EACA,cAAA;EACA,iBAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;AACF;;AAEA;EACE,cAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;AACF;;AAEA;EACE,YAAA;EACA,aAAA;EACA,cAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;AACF;;AAEA;EACE,YAAA;EACA,YAAA;EACA,cAAA;EACA,iBAAA;EACA,kBAAA;AACF","sourcesContent":[".comment__list {\n  position: absolute;\n  top: 50px;\n  left: 50px;\n  width: 400px;\n  list-style-type: none;\n}\n\n.comment_heading {\n  width: 240px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.comment__name-input {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 20px;\n}\n\n.comment__textarea {\n  width: 300px; \n  height: 150px;\n  display: block; \n  margin-left: auto; \n  margin-right: auto; \n  margin-bottom: 20px;\n}\n\n.comment__btn {\n  width: 200px; \n  height: 50px; \n  display: block; \n  margin-left: auto; \n  margin-right: auto;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".comment__list-item {\n  border-radius: 5px;\n  background-color: #fff;\n  width: 400px;\n  margin-top: 10px;\n  padding: 10px;\n}\n\n.comment__list-item-name {\n  padding-bottom: 10px;\n  border-bottom: 1px solid #f0f0f0;\n}\n\n.comment__list-item-text {\n  padding-top: 10px;\n  padding-bottom: 10px;\n  word-break: break-all;\n}\n\n.comment__list-item-time {\n  display: inline-block;\n  border-top: 1px solid #f0f0f0;\n  padding-top: 10px;\n}\n\n.comment__list-item-delete-btn {\n  display: inline-block;\n  padding: 1px;\n  margin-left: 210px;\n}", "",{"version":3,"sources":["webpack://src/comment.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,sBAAA;EACA,YAAA;EACA,gBAAA;EACA,aAAA;AACF;;AAEA;EACE,oBAAA;EACA,gCAAA;AACF;;AAEA;EACE,iBAAA;EACA,oBAAA;EACA,qBAAA;AACF;;AAEA;EACE,qBAAA;EACA,6BAAA;EACA,iBAAA;AACF;;AAEA;EACE,qBAAA;EACA,YAAA;EACA,kBAAA;AACF","sourcesContent":[".comment__list-item {\r\n  border-radius: 5px;\r\n  background-color: #fff;\r\n  width: 400px;\r\n  margin-top: 10px;\r\n  padding: 10px;\r\n}\r\n\r\n.comment__list-item-name {\r\n  padding-bottom: 10px;\r\n  border-bottom: 1px solid #f0f0f0;\r\n}\r\n\r\n.comment__list-item-text {\r\n  padding-top: 10px;\r\n  padding-bottom: 10px;\r\n  word-break: break-all;\r\n}\r\n\r\n.comment__list-item-time {\r\n  display: inline-block;\r\n  border-top: 1px solid #f0f0f0;\r\n  padding-top: 10px;\r\n}\r\n\r\n.comment__list-item-delete-btn {\r\n  display: inline-block;\r\n  padding: 1px;\r\n  margin-left: 210px;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".comment__list-item {\n  border-radius: 5px;\n  background-color: #fff;\n  width: 400px;\n  margin-top: 10px;\n  padding: 10px;\n}\n\n.comment__list-item-name {\n  padding-bottom: 10px;\n  border-bottom: 1px solid #f0f0f0;\n}\n\n.comment__list-item-text {\n  padding-top: 10px;\n  padding-bottom: 10px;\n  word-break: break-all;\n}\n\n.comment__list-item-time {\n  display: inline-block;\n  border-top: 1px solid #f0f0f0;\n  padding-top: 10px;\n}\n\n.comment__list-item-delete-btn {\n  display: inline-block;\n  padding: 1px;\n  margin-left: 210px;\n}", "",{"version":3,"sources":["webpack://src/comment.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,sBAAA;EACA,YAAA;EACA,gBAAA;EACA,aAAA;AACF;;AAEA;EACE,oBAAA;EACA,gCAAA;AACF;;AAEA;EACE,iBAAA;EACA,oBAAA;EACA,qBAAA;AACF;;AAEA;EACE,qBAAA;EACA,6BAAA;EACA,iBAAA;AACF;;AAEA;EACE,qBAAA;EACA,YAAA;EACA,kBAAA;AACF","sourcesContent":[".comment__list-item {\n  border-radius: 5px;\n  background-color: #fff;\n  width: 400px;\n  margin-top: 10px;\n  padding: 10px;\n}\n\n.comment__list-item-name {\n  padding-bottom: 10px;\n  border-bottom: 1px solid #f0f0f0;\n}\n\n.comment__list-item-text {\n  padding-top: 10px;\n  padding-bottom: 10px;\n  word-break: break-all;\n}\n\n.comment__list-item-time {\n  display: inline-block;\n  border-top: 1px solid #f0f0f0;\n  padding-top: 10px;\n}\n\n.comment__list-item-delete-btn {\n  display: inline-block;\n  padding: 1px;\n  margin-left: 210px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -145,7 +145,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "html {\n  box-sizing: border-box;\n}\n\n*, *::before, *::after {\n  box-sizing: inherit;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: #f0f0f0;\n  font-family: Arial, Helvetica, sans-serif;\n}", "",{"version":3,"sources":["webpack://src/index.scss"],"names":[],"mappings":"AAEA;EACE,sBAAA;AADF;;AAIA;EACE,mBAAA;EACA,SAAA;EACA,UAAA;AADF;;AAIA;EACE,yBAbK;EAcL,yCAAA;AADF","sourcesContent":["$main: #f0f0f0;\r\n\r\nhtml {\r\n  box-sizing: border-box;\r\n}\r\n\r\n*, *::before, *::after {\r\n  box-sizing: inherit;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\nbody {\r\n  background-color: $main;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "html {\n  box-sizing: border-box;\n}\n\n*, *::before, *::after {\n  box-sizing: inherit;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: #f0f0f0;\n  font-family: Arial, Helvetica, sans-serif;\n}", "",{"version":3,"sources":["webpack://src/index.scss"],"names":[],"mappings":"AAEA;EACE,sBAAA;AADF;;AAIA;EACE,mBAAA;EACA,SAAA;EACA,UAAA;AADF;;AAIA;EACE,yBAbK;EAcL,yCAAA;AADF","sourcesContent":["$main: #f0f0f0;\n\nhtml {\n  box-sizing: border-box;\n}\n\n*, *::before, *::after {\n  box-sizing: inherit;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: $main;\n  font-family: Arial, Helvetica, sans-serif;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -30580,6 +30580,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Comment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Comment */ "./src/Comment.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -30591,12 +30597,6 @@ function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.it
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -30618,12 +30618,6 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-// Задание:
-// 1. Отображение списка комментариев: автор, текст, дата и время.
-// 2. Добавление нового комментария (поля для ввода: имя автора, текст).
-// 3. Удаление комментария (кнопка удаления рядом с каждым комментарием).
-// 4. Сохранение состояния приложения в localStorage в формате JSON (при 
-// перезагрузке страницы все добавленные комментарии должны подтягиваться оттуда).
 
 
 
@@ -30641,9 +30635,9 @@ var App = /*#__PURE__*/function (_Component) {
     _this = _super.call(this);
     _this.state = {
       comments: []
-    }; // this.setTimeAndDate = this.setTimeAndDate.bind(this);
-
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    };
+    _this.addComment = _this.addComment.bind(_assertThisInitialized(_this));
+    _this.deleteComment = _this.deleteComment.bind(_assertThisInitialized(_this));
     _this.handleBtnClickAndCheckInputs = _this.handleBtnClickAndCheckInputs.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -30651,19 +30645,17 @@ var App = /*#__PURE__*/function (_Component) {
   _createClass(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var storageComments = JSON.parse(localStorage.getItem('comments'));
+      var storageComments = JSON.parse(localStorage.getItem('storageComments'));
       var stateComments = this.state.comments;
       if (storageComments === null) return;
       storageComments.forEach(function (comment) {
         return stateComments.push(comment);
-      }); // this.forceUpdate();
-
-      this.setState(this.state);
+      });
+      this.forceUpdate();
     }
   }, {
-    key: "handleChange",
-    value: function handleChange() {
-      var stateComments = this.state.comments;
+    key: "addComment",
+    value: function addComment() {
       var name = document.querySelector('.comment__name-input').value;
       var text = document.querySelector('.comment__textarea').value;
       var date = new Date();
@@ -30674,28 +30666,23 @@ var App = /*#__PURE__*/function (_Component) {
         date: date,
         id: id
       };
+      localStorage.setItem('storageComments', JSON.stringify([].concat(_toConsumableArray(this.state.comments), [newCommentItem])));
       this.setState(_objectSpread(_objectSpread({}, this.state), {}, {
         comments: [].concat(_toConsumableArray(this.state.comments), [newCommentItem])
       }));
-      localStorage.setItem('newCommentItem', JSON.stringify(this.state.comments));
-      console.log('new comment', newCommentItem);
-      console.log(this.state.comments);
-    } // setTimeAndDate() {
-    //   const date = new Date();
-    //   const years = date.getFullYear();
-    //   const months = date.getMonth() + 1;
-    //   const days = date.getDate();
-    //   const hours = date.getHours();
-    //   const completeHours = (hours.toString().length === 1 ? '0' + hours.toString() : hours);
-    //   const minutes = date.getMinutes();
-    //   const completeMinutes = (minutes.toString().length === 1 ? '0' + minutes.toString() : minutes);
-    //   const timeAndDate = `${completeHours}:${completeMinutes} ${days}.${months}.${years}`;
-    //   this.setState({
-    //     date: timeAndDate
-    //   });
-    //   console.log(this.state.date);
-    // }
+    }
+  }, {
+    key: "deleteComment",
+    value: function deleteComment(deletingComment) {
+      var filteredComments = _toConsumableArray(this.state.comments).filter(function (comment) {
+        return comment.id !== deletingComment;
+      });
 
+      localStorage.setItem('storageComments', JSON.stringify(filteredComments));
+      this.setState({
+        comments: filteredComments
+      });
+    }
   }, {
     key: "clearInputs",
     value: function clearInputs() {
@@ -30703,20 +30690,13 @@ var App = /*#__PURE__*/function (_Component) {
       document.querySelector('.comment__textarea').value = '';
     }
   }, {
-    key: "deleteComment",
-    value: function deleteComment(ev) {
-      var commentDelBtn = ev.target;
-      commentDelBtn.parentElement.remove();
-    }
-  }, {
     key: "handleBtnClickAndCheckInputs",
     value: function handleBtnClickAndCheckInputs() {
       if (document.querySelector('.comment__name-input').value.trim() === '' || document.querySelector('.comment__textarea').value.trim() === '') {
         return alert('Enter values!');
-      } // this.setTimeAndDate();
+      }
 
-
-      this.handleChange();
+      this.addComment();
       this.clearInputs();
     }
   }, {
@@ -30765,8 +30745,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Comment = function Comment(props) {
-  var comments = props.comments; // console.log({props});
-
+  var comments = props.comments;
   var result = comments.map(function (comment) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       className: "comment__list-item",
@@ -30779,7 +30758,9 @@ var Comment = function Comment(props) {
       className: "comment__list-item-time"
     }, new Date(comment.date).toLocaleDateString(), ", ", new Date(comment.date).toLocaleTimeString()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "comment__list-item-delete-btn",
-      onClick: props.deleteComment
+      onClick: function onClick() {
+        return props.deleteComment(comment.id);
+      }
     }, "Delete"));
   });
   return result;
