@@ -18,10 +18,10 @@ export const commentReducer = (prevState = initialState, action) => {
           }
         ]
       }
-    case DELETE_COMMENT:
-      return {
-        comments: [...prevState]
-      }
+    // case DELETE_COMMENT:
+    //   return {
+    //     comments: [...prevState]
+    //   }
     default:
       return prevState
   }
