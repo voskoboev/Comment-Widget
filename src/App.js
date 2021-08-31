@@ -7,28 +7,16 @@ import { addComment, deleteComment } from './store/actions/commentActions'
 
 class App extends Component {
 
-  componentDidMount() {
-    const storageComments = JSON.parse(localStorage.getItem('storageComments'))
-    const stateComments = this.props.comments
+  // componentDidMount() {
+    // const storageComments = JSON.parse(localStorage.getItem('storageComments'))
+    // const stateComments = this.props.comments
 
-    if (storageComments === null) return
+    // if (storageComments === null) return
 
-    storageComments.forEach(comment => stateComments.push(comment))
+    // storageComments.forEach(comment => stateComments.push(comment))
 
-    this.forceUpdate()
-  }
-
-  handleBtnClickAndCheckInputs() {
-    const nameInput = document.querySelector('.comment__name-input'),
-      textarea = document.querySelector('.comment__textarea')
-
-    if (!nameInput.value || !textarea.value) return alert('Enter values!')
-
-    this.addListComment()
-
-    nameInput.value = ''
-    textarea.value = ''
-  }
+    // this.forceUpdate()
+  // }
 
   render() {
     return (
@@ -38,7 +26,7 @@ class App extends Component {
           deleteComment={this.props.deleteListComment}
         />
         <CommentCreator
-          handleBtnClick={this.props.handleBtnClickAndCheckInputs}
+          // handleBtnClick={this.props.handleBtnClickAndCheckInputs}
         />
       </div >
     )
@@ -53,8 +41,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    addListComment: (name, text, date, id) => dispatch(addComment(name, text, date, id)),
-    deleteListComment: (deletingComment) => dispatch(deleteComment(deletingComment))
+    addListComment: () => dispatch(addComment()),
+    // deleteListComment: (deletingComment) => dispatch(deleteComment(deletingComment))
   }
 }
 

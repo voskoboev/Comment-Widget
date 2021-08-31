@@ -5,10 +5,6 @@ import { Provider } from 'react-redux'
 import App from './App'
 import { commentReducer } from './store/reducers/commentReducer'
 
-// const initialState = {
-//   comments: [],
-// }
-
 const store = createStore(commentReducer)
 
 ReactDOM.render((
