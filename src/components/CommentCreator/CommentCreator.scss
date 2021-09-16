@@ -2,21 +2,51 @@
 .comment__name-input,
 .comment__textarea,
 .comment__btn {
-  margin: 20px auto;
   display: block;
+  margin: 20px auto;
+  outline: none;
+  font-family: inherit;
 }
 
 .comment_heading {
   width: 270px;
+  color: #000;
+}
+
+.comment__name-input {
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #a39e9e;
+  border-radius: 20px;
+  font-size: 13px;
 }
 
 .comment__textarea {
   width: 300px;
+  font-size: 13px;
   height: 150px;
+  padding: 10px;
+  border: 1px solid #a39e9e;
+  border-radius: 20px;
   resize: none;
+}
+
+.comment__name-input::placeholder,
+.comment__textarea::placeholder {
+  color: #a39e9e;
 }
 
 .comment__btn {
   width: 200px;
   height: 50px;
+  background-color: transparent;
+  border: 1px solid #a39e9e;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #5a5656;
+  box-shadow: 2px 2px 4px 0px rgba(34, 60, 80, 0.2);
+}
+
+.comment__btn:active {
+  box-shadow: none;
 }
