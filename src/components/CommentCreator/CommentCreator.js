@@ -1,7 +1,28 @@
 import React from 'react'
 import './CommentCreator.scss'
 
-const CommentCreator = ({ props }) => {
+const CommentCreator = ( props ) => {
+
+  console.log('comment creator props', props);
+  
+  function createComment() {
+    const name = document.querySelector('.comment__name-input').value,
+      text = document.querySelector('.comment__textarea').value,
+      date = new Date(),
+      id = ''
+      // id = this.props.getState().length.toString()
+
+    this.props.addListComment(name, text, date, id)
+
+    // const newCommentItem = {
+    //   name,
+    //   text,
+    //   date,
+    //   id
+    // }
+
+    // localStorage.setItem('storageComments', JSON.stringify([...this.props.comments, newCommentItem]))
+  }
 
   const handleBtnClickAndCheckInputs = () => {
     const nameInput = document.querySelector('.comment__name-input'),
@@ -9,7 +30,7 @@ const CommentCreator = ({ props }) => {
 
     if (!nameInput.value || !textarea.value) return alert('Enter values!')
 
-    props.addListComment()
+    createComment()
 
     console.log(props);
 

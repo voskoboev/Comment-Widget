@@ -8,14 +8,14 @@ import { addComment, deleteComment } from './store/actions/commentActions'
 class App extends Component {
 
   // componentDidMount() {
-    // const storageComments = JSON.parse(localStorage.getItem('storageComments'))
-    // const stateComments = this.props.comments
-
-    // if (storageComments === null) return
-
-    // storageComments.forEach(comment => stateComments.push(comment))
-
-    // this.forceUpdate()
+  // const storageComments = JSON.parse(localStorage.getItem('storageComments'))
+  // const stateComments = this.props.comments
+  // if (storageComments === null) return
+  // storageComments.forEach(comment => stateComments.push(comment))
+  // this.forceUpdate()
+  // }
+  // createComment() {
+  //   this.props.addListComment
   // }
 
   render() {
@@ -23,10 +23,11 @@ class App extends Component {
       <div>
         <CommentList
           comments={this.props.comments}
-          deleteComment={this.props.deleteListComment}
+        // deleteComment={this.props.deleteListComment}
         />
         <CommentCreator
-          // handleBtnClick={this.props.handleBtnClickAndCheckInputs}
+          addListComment={this.props.addListComment}
+        // handleBtnClick={this.props.handleBtnClickAndCheckInputs}
         />
       </div >
     )
@@ -41,7 +42,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    addListComment: () => dispatch(addComment()),
+    addListComment: (name, text, date, id) => dispatch(addComment(name, text, date, id)),
     // deleteListComment: (deletingComment) => dispatch(deleteComment(deletingComment))
   }
 }

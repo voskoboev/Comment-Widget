@@ -1,7 +1,8 @@
 import { ADD_COMMENT, DELETE_COMMENT } from '../actions/actionTypes'
 
 const initialState = {
-  comments: JSON.parse(localStorage.getItem('storageComments'))
+  // comments: JSON.parse(localStorage.getItem('storageComments'))
+  comments: []
 }
 
 // function deleteListComment(deletingComment) {
@@ -15,30 +16,16 @@ const initialState = {
 // }
 
 export const commentReducer = (prevState = initialState, action) => {
-  const name = document.querySelector('.comment__name-input').value,
-    text = document.querySelector('.comment__textarea').value,
-    date = new Date(),
-    id = this.props.comments.length.toString()
-
-  const newCommentItem = {
-    name,
-    text,
-    date,
-    id
-  }
-
-  // localStorage.setItem('storageComments', JSON.stringify([...this.props.comments, newCommentItem]))
-
   switch (action.type) {
     case ADD_COMMENT:
       return {
         comments: [
           ...prevState,
           {
-            name: newCommentItem.name,
-            text: newCommentItem.text,
-            date: newCommentItem.date,
-            id: newCommentItem.id
+            name: action.payload.name,
+            text: action.payload.text,
+            date: action.payload.date,
+            id: action.payload.id
           }
         ]
       }
